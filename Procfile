@@ -1,0 +1,1 @@
+web: gunicorn --port=$PORT --no-browser LifeCare_App.ipynb
