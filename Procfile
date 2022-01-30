@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT LifeCare_App:app
+web: gunicorn --bind 0.0.0.0:$PORT lifecare_app:app
