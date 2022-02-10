@@ -96,7 +96,7 @@ def name(ch):
     
     Name = result.text
     print(Name)
-    generate(ch)
+#     generate(ch)
 # name()
 def age(ch):
     global Age
@@ -121,7 +121,7 @@ def age(ch):
     
     Age = result.text
     print(Age)
-    generate(ch)
+#     generate(ch)
 # age()
 def gender(ch):
     global Gender
@@ -153,7 +153,7 @@ def gender(ch):
 
     Gender =  res
     print(Gender)
-    generate(ch)
+#     generate(ch)
 # gender()
 def symptoms(ch):
     global Symptom
@@ -178,7 +178,7 @@ def symptoms(ch):
     
     Symptom = result.text
     print(Symptom)
-    generate(ch)
+#     generate(ch)
 # symptoms()
 def diagnosis(ch):
     global Diagnosis
@@ -202,7 +202,7 @@ def diagnosis(ch):
     result = speech_recognizer.recognize_once_async().get()
     Diagnosis = result.text
     print(Diagnosis)
-    generate(ch)
+#     generate(ch)
 # diagnosis()
     
 def advice(ch):
@@ -228,7 +228,7 @@ def advice(ch):
     
     Advice = result.text
     print(Advice)
-    generate(ch)
+#     generate(ch)
 # advice()
 foreground_image = Image.open('LC_Prescription.png')
 def save():
@@ -279,8 +279,7 @@ def voice():
     choose_lang(lang)
     while(True):    
 
-        # Exception handling to handle
-        # exceptions at the runtime
+        # Exception handling to handle exceptions at the runtime
         try:
             
             name(lang)
@@ -295,8 +294,12 @@ def voice():
 
             advice(lang)
 
+            generate(lang)
+            
             save() 
+            
             email_prescription()
+            
             send_msg(lang)
 
             break
