@@ -18,4 +18,4 @@ Checkout the hosted application on heroku here:
 
 👇👇👇
 
-https://frt-lifecare.herokuapp.com/ 
+https://frt-lifecare.herokuapp.com/
