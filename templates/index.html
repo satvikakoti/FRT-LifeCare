@@ -12,7 +12,7 @@
    <meta name="description" content="">
    <meta name="author" content="">
    <!-- Site Icons -->
-   <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico')}}"/>
+   <link rel="shortcut icon" href="{{ url_for('static', filename='images/fevicon.ico.png')}}" type="image/x-icon" />
    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png')}}">
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
@@ -26,7 +26,6 @@
    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css')}}">
    <!-- Custom CSS -->
    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css')}}">
-   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
    <!-- Modernizer for Portfolio -->
    <script src="{{ url_for('static', filename='js/modernizer.js')}}"></script>
    <!-- [if lt IE 9] -->
@@ -360,7 +359,7 @@
             <div class="row dev-list text-center">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
                     <div class="widget clearfix">
-<!--                         <img src="images/doctor_01.jpg" alt="" class="img-responsive img-rounded"> -->
+                        <img src="images/doctor_01.jpg" alt="" class="img-responsive img-rounded">
                         <div class="widget-title">
                             <h3>Soren Bo Bostian</h3>
                             <small>Clinic Owner</small>
@@ -379,7 +378,7 @@
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeIn;">
                     <div class="widget clearfix">
-<!--                         <img src="images/doctor_02.jpg" alt="" class="img-responsive img-rounded"> -->
+                        <img src="images/doctor_02.jpg" alt="" class="img-responsive img-rounded">
                         <div class="widget-title">
                             <h3>Bryan Saftler</h3>
                             <small>Internal Diseases</small>
@@ -398,7 +397,7 @@
 
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn">
                     <div class="widget clearfix">
-<!--                         <img src="images/doctor_03.jpg" alt="" class="img-responsive img-rounded"> -->
+                        <img src="images/doctor_03.jpg" alt="" class="img-responsive img-rounded">
                         <div class="widget-title">
                             <h3>Matthew Bayliss</h3>
                             <small>Orthopedics Expert</small>
@@ -498,6 +497,19 @@
          <!-- end container -->
       </div>
       <!-- end section -->
+
+<!-- Chat section Azure Health Bot-->
+<button class="open-button open-button-4" onclick="openForm()"><i class='fa fa-comment' style="font-size:24px;"></i></button>
+
+<div class="chat-popup" id="myForm">
+  <form action="#" class="form-container">
+    <h3>What's on your mind?</h3>
+	<iframe src="https://healthcare-bot-wlmy5pki25zmu.azurewebsites.net/" height="400px" width="100%">
+	</iframe>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<!-- end section -->
       <div id="getintouch" class="section wb wow fadeIn" style="padding-bottom:0;">
          <div class="container">
             <div class="heading">
@@ -549,7 +561,7 @@
                   </div>
                </div>
 
-                           </div>
+            </div>
          </div>
       </footer>
       <div class="copyright-area wow fadeIn">
@@ -575,11 +587,23 @@
             </div>
          </div>
       </div>
+
+
       <!-- end copyrights -->
-      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a><br><br>
       <!-- all js files -->
       <script src="{{ url_for('static', filename='js/all.js')}}"></script>
       <!-- all plugins -->
       <script src="{{ url_for('static', filename='js/custom.js')}}"></script>
-   </body>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+    </body>
 </html>
