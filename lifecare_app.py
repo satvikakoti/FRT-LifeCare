@@ -1,6 +1,5 @@
 import os
 from datetime import date
-import PIL
 from PIL import Image
 from twilio.rest import Client
 import random
